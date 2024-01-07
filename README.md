@@ -16,3 +16,7 @@ Think of a router - data is always being sent to it but rarely actually destined
 - Output:
 You can’t send a single packet without this chain allowing it. You have a lot of options whether you want to allow a port to communicate or not. It’s the best place to limit your outbound traffic if you’re not sure what port each application is communicating through.
 if you try to ping example.com, iptables will check its output chain to see what the rules are regarding ping and example.com before making a decision to allow or deny the connection attempt.
+
+~~~
+# iptables -L -n -v          // to list current iptables configuration
+~~~
